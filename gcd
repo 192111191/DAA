@@ -1,0 +1,25 @@
+#include<stdio.h>
+int gcd(int a,int b)
+{
+if(b==0)
+{
+return a;
+}
+return gcd(b,a%b);
+}
+int main()
+{
+int a,b;
+printf("enter first number:");
+scanf("%d",&a);
+printf("enter second number:");
+scanf("%d",&b);
+if(a<0||b<0)
+{
+printf("illegal input");
+}
+else{
+int result=gcd(a,b);
+printf("gcd of %d and %d is %d",a,b,result);
+}
+}

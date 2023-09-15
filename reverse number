@@ -1,0 +1,32 @@
+#include<stdio.h>
+#include<stdbool.h>
+#include<stdlib.h>
+bool isnumber(const char *str)
+{
+  while(*str)
+    if(*str<'0'||*str>'9')
+      return false;
+  else
+    str++;
+  return true;
+  }
+int main()
+{
+  char input[100];
+  printf("enter number:");
+  scanf("%s",&input);
+  if(!isnumber(input))
+    {
+    printf("illegal input.\n");
+    return 1;
+    }
+    int n=atoi(input),rev=0;
+    while(n)
+      {
+      rev=rev*10+n%10;
+      n/=10;
+      }
+    printf("reverse number:%d",rev);
+    return 0;
+    }
+      

@@ -1,0 +1,27 @@
+#include<stdio.h>
+#include<limits.h>
+int main()
+{
+int i,min1,min2,num,n;
+printf("enter number:");
+scanf("%d",&n);
+min1=INT_MAX;
+min2=INT_MAX;
+printf("enter %d number:",n);
+for(i=0;i<n;i++)
+{
+scanf("%d"&num);
+if(num<min1)
+{
+min2=min1;
+min1=num;
+}
+else if(num<min2||num!=min1)
+{
+min2=num;
+}
+}
+printf("min1 value:%d",min1);
+printf("min2 value:%d",min2);
+return 0;
+}
